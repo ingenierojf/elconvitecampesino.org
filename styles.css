@@ -18,7 +18,7 @@ body {
 /* --- Header Responsivo --- */
 header {
     background-color: var(--blanco);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -56,7 +56,10 @@ header {
     cursor: pointer;
 }
 
-nav { display: flex; align-items: center; }
+nav {
+    display: flex;
+    align-items: center;
+}
 
 .menu-list {
     display: flex;
@@ -65,7 +68,9 @@ nav { display: flex; align-items: center; }
     padding: 0;
 }
 
-.menu-item { position: relative; }
+.menu-item {
+    position: relative;
+}
 
 .menu-button {
     background: none;
@@ -86,13 +91,15 @@ nav { display: flex; align-items: center; }
     left: 0;
     background-color: var(--blanco);
     min-width: 200px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s;
 }
 
-.menu-item:hover .dropdown { max-height: 600px; }
+.menu-item:hover .dropdown {
+    max-height: 600px;
+}
 
 .dropdown a {
     color: var(--verde-oscuro);
@@ -105,38 +112,57 @@ nav { display: flex; align-items: center; }
 
 /* --- Adaptación para Móvil y Tablet --- */
 @media (max-width: 1024px) {
-    .menu-toggle { display: block; }
-    
+    .menu-toggle {
+        display: block;
+    }
+
     nav {
-        display: none; /* Se oculta el menú normal */
+        display: none;
+        /* Se oculta el menú normal */
         position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
         background: var(--blanco);
         flex-direction: column;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     }
 
-    nav.active { display: flex; }
+    nav.active {
+        display: flex;
+    }
 
-    .menu-list { flex-direction: column; width: 100%; }
-    
-    .dropdown { 
-        position: static; 
+    .menu-list {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .dropdown {
+        position: static;
         background: var(--crema);
         max-height: none;
         display: none;
     }
-    
-    .menu-item.open .dropdown { display: block; }
+
+    .menu-item.open .dropdown {
+        display: block;
+    }
 }
 
 /* --- Adaptación para TV (Pantallas Gigantes) --- */
 @media (min-width: 1920px) {
-    .nav-container { padding: 25px 50px; }
-    .menu-button { font-size: 1.2rem; padding: 20px 25px; }
-    h1 { font-size: 5rem !important; }
+    .nav-container {
+        padding: 25px 50px;
+    }
+
+    .menu-button {
+        font-size: 1.2rem;
+        padding: 20px 25px;
+    }
+
+    h1 {
+        font-size: 5rem !important;
+    }
 }
 
 /* --- Footer --- */
@@ -147,12 +173,37 @@ footer {
     text-align: center;
 }
 
-.social { display: flex; justify-content: center; gap: 20px; margin-bottom: 15px; }
-.social a { color: var(--amarillo); }
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.social a {
+    color: var(--amarillo);
+}
+
+.social svg {
+    width: 24px;
+    height: 24px;
+    stroke-width: 2;
+    /* Asegurar grosor consistente en iconos de línea */
+}
 
 .soaltech-footer {
     font-size: 0.8rem;
-    border-top: 1px solid rgba(255,255,255,0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 15px;
     margin-top: 15px;
+}
+
+.developer-link {
+    color: var(--blanco);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.developer-link:hover {
+    color: var(--amarillo);
 }
